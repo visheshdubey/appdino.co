@@ -1,8 +1,8 @@
 "use client"
-import { motion } from 'framer-motion';
-import AnimatedNavLink from '@/components/AnimatedNavLink';
-import { X as Cross, AlignRight } from 'lucide-react'
-import { useState } from 'react';
+import { motion } from "framer-motion";
+import AnimatedNavLink from "@/components/AnimatedNavLink";
+import { X as Cross, AlignRight } from "lucide-react"
+import { useState } from "react";
 const Header = () => {
      const [isSideNavOpen, setIsSideNavOpen] = useState(false)
      const toggleSideNav = () => {
@@ -35,7 +35,7 @@ const Header = () => {
                          transition={{ type: "tween", stiffness: 100 }}
                          className=" absolute text-purple-800 z-50 top-0 p-4 right-0 drop-shadow-2xl w-7/12 h-screen bg-white">
                          <button type="button" onClick={toggleSideNav} className="flex w-full border md:hidden flex-1 justify-end">
-                              <Cross color='#000' />
+                              <Cross color="#000" />
                          </button>
                          <ul className="flex border items-start p-4 flex-col gap-4">
                               <li>About</li>

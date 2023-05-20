@@ -1,10 +1,10 @@
 "use client"
-import { motion } from 'framer-motion';
-import Hero from '@/components/Hero';
-import Section from '@/components/Section';
-import { useScrollAppear } from '@/hooks/useScrollAppear';
-import Image from 'next/image'
-import { useState } from 'react';
+import { motion } from "framer-motion";
+import Hero from "@/components/Hero";
+import Section from "@/components/Section";
+import { useScrollAppear } from "@/hooks/useScrollAppear";
+import Image from "next/image"
+import { useState } from "react";
 export default function Home() {
   // const draw = {
   //   hidden: { pathLength: 0, opacity: 1 },
@@ -26,7 +26,7 @@ export default function Home() {
         <div className="flex  flex-[3] items-center justify-center gap-12 flex-col">
           <span className="text-4xl md:text-6xl lg:text-8xl font-extrabold text-center">MAKE A LIVING AS A WEB
             DESIGNER</span>
-          <p className='text-center'>Create a successful and fulfilling career as a freelance web designer. We'll teach you the in-demand skills you need to get there.</p>
+          <p className="text-center">Create a successful and fulfilling career as a freelance web designer. We"ll teach you the in-demand skills you need to get there.</p>
           <div> <motion.button initial={{ scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 1.05 }} className="px-8 py-4 bg-red-100 font-bold  text-purple-800 ">Book a Free
             Call</motion.button> </div>
         </div>
@@ -143,7 +143,7 @@ export default function Home() {
           </div>
         </div>
       </Section>
-      <Section bgColor={'bg-red-200'}>
+      <Section bgColor={"bg-red-200"}>
         <h2 className="text-purple-800 font-extrabold text-3xl">WHAT PEOPLE SAY
           ABOUT US</h2>
         <div className="flex gap-20">
