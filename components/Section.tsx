@@ -14,7 +14,7 @@ const Section = ({
             initial={{ y: 40, opacity: 0 }}
             transition={{ type: "spring", stiffness: 100 }}
             animate={isVisible && {y:0, opacity:1}}
-            className={`flex flex-col w-full max-w-6xl overflow-hidden px-${paddingX} text-black py-24 gap-20 items-center justify-between`}>
+            className={`flex flex-col w-full max-w-6xl overflow-hidden px-${paddingX} text-black py-12 md:py-24 gap-20 items-center justify-between`}>
                 {children}
             </motion.div>
         </div>

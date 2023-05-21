@@ -10,7 +10,7 @@ const Header = () => {
      }
      const variants = {
           open: { opacity: 1, x: 0 },
-          closed: { opacity: 0.6, x: "100%" },
+          closed: { opacity: 0, x: "100%" },
      }
      return (
           <nav className="relative flex justify-center">
@@ -25,19 +25,24 @@ const Header = () => {
                     <div className="hidden md:flex flex-1 justify-end">
                          Contact Us
                     </div>
-                    <button type="button" onClick={toggleSideNav} className="flex md:hidden flex-1 justify-end">
-                         <AlignRight />
-                    </button>
+                    <div className="flex w-full  md:hidden flex-1 justify-end">
+                         <button type="button" onClick={toggleSideNav} className="">
+                              <AlignRight />
+                         </button>
+                    </div>
                     <motion.div
                          initial={"closed"}
                          animate={isSideNavOpen ? "open" : "closed"}
                          variants={variants}
                          transition={{ type: "tween", stiffness: 100 }}
                          className=" absolute text-purple-800 z-50 top-0 p-4 right-0 drop-shadow-2xl w-7/12 h-screen bg-white">
-                         <button type="button" onClick={toggleSideNav} className="flex w-full border md:hidden flex-1 justify-end">
-                              <Cross color="#000" />
-                         </button>
-                         <ul className="flex border items-start p-4 flex-col gap-4">
+                         <div className="flex w-full  md:hidden flex-1 justify-end">
+                              <button type="button" onClick={toggleSideNav} className="">
+                                   <Cross color="#000" />
+                              </button>
+                         </div>
+
+                         <ul className="flex  items-start p-4 flex-col gap-4">
                               <li>About</li>
                               <li>Services</li>
                               <li>Portfolio</li>

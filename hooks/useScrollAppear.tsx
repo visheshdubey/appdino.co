@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-export const useScrollAppear = () => {
+export const useScrollAppear = (x:number = 0.3) => {
   const [isVisible, setIsVisible] = useState(false);
   const targetRef = useRef(null);
 

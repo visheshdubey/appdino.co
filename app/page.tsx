@@ -1,5 +1,5 @@
 "use client"
-import { motion } from "framer-motion";
+import { motion, useTime } from "framer-motion";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import { useScrollAppear } from "@/hooks/useScrollAppear";
@@ -7,7 +7,12 @@ import Image from "next/image"
 import { useState } from "react";
 import image from "./assets/port1.png"
 import image2 from "./assets/port2.png"
+import { FileSignature, Code2, Link, Globe } from "lucide-react";
+// FileSignature
 export default function Home() {
+const {targetRef, isVisible} = useScrollAppear(0.1);
+const {targetRef:targetRef1, isVisible:isVisible1} = useScrollAppear(0.1);
+const {targetRef:targetRef2, isVisible:isVisible2} = useScrollAppear(0.1);
   // const draw = {
   //   hidden: { pathLength: 0, opacity: 1 },
   //   visible: (i:number) => {
@@ -23,7 +28,7 @@ export default function Home() {
   //   }
   // };
   return (
-    <main className="flex-col items-center justify-center">
+    <main className="flex-col items-center justify-center ">
       <Hero>
         <div className="flex  flex-[3] items-center justify-center gap-12 flex-col">
           <span className="text-4xl md:text-6xl lg:text-8xl font-extrabold text-center">MAKE A LIVING AS A WEB
@@ -32,17 +37,17 @@ export default function Home() {
           <div> <motion.button initial={{ scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 1.05 }} className="px-8 py-4 bg-red-100 font-bold  text-purple-800 ">Book a Free
             Call</motion.button> </div>
         </div>
-        <div className="flex flex-wrap w-full justify-between  flex-1">
+        <div className="hidden md:flex flex-wrap w-full justify-between  flex-1">
           <div className="flex flex-col gap-2 ">
-            <i className="bi bi-globe text-5xl"></i>
+          <Globe className="w-12 h-12 text-white" strokeWidth={1.3}/>
             <span className="text-xl md:text-2xl font-bold text leading-6">JOIN A <br />COMMUNITY</span>
           </div>
           <div className="flex flex-col gap-2 ">
-            <i className="bi bi-globe text-5xl"></i>
+          <Globe className="w-12 h-12 text-white" strokeWidth={1.3}/>
             <span className="text-xl md:text-2xl font-bold text leading-6">JOIN A <br />COMMUNITY</span>
           </div>
           <div className="flex flex-col gap-2 ">
-            <i className="bi bi-globe text-5xl"></i>
+          <Globe className="w-12 h-12 text-white" strokeWidth={1.3}/>
             <span className="text-xl md:text-2xl font-bold text leading-6">JOIN A <br />COMMUNITY</span>
           </div>
         </div>
@@ -70,8 +75,8 @@ export default function Home() {
       <Section>
         <h2 className="text-purple-800 font-extrabold text-3xl">SERVICES WE OFFER</h2>
         <div className="flex flex-col md:flex-row w-full justify-between gap-20">
-          <div className="flex flex-col gap-6 flex-1">
-            <i className="bi bi-globe text-5xl text-purple-800"></i>
+          <div className="flex flex-col gap-8 flex-1">
+            <FileSignature className="w-12 h-12 text-purple-800" strokeWidth={1.2} />
             <span className="text-2xl font-extrabold text leading-6">UI/UX<br /> DESIGN</span>
             <p className="text-sm leading-relaxed text-gray-500">Lorem ipsum dolor sit amet, consectetur
               adipiscing elit, sed
@@ -79,8 +84,8 @@ export default function Home() {
               tempor incididunt ut
               labore et dolore magna aliqua.</p>
           </div>
-          <div className="flex flex-col gap-6 flex-1">
-            <i className="bi bi-globe text-5xl text-purple-800"></i>
+          <div className="flex flex-col gap-8 flex-1">
+            <Code2 className="w-12 h-12 text-purple-800" strokeWidth={1.2} />
             <span className="text-2xl font-extrabold text leading-6">WEB/APP<br /> DEVELOPMENT</span>
             <p className="text-sm leading-relaxed text-gray-500">Lorem ipsum dolor sit amet, consectetur
               adipiscing elit, sed
@@ -88,8 +93,8 @@ export default function Home() {
               tempor incididunt ut
               labore et dolore magna aliqua.</p>
           </div>
-          <div className="flex flex-col gap-6 flex-1">
-            <i className="bi bi-globe text-5xl text-purple-800"></i>
+          <div className="flex flex-col gap-8 flex-1">
+            <Link className="w-12 h-12 text-purple-800" strokeWidth={1.2} />
             <span className="text-2xl font-extrabold text leading-6">WEB 3.0<br /> DEVELOPMENT</span>
             <p className="text-sm leading-relaxed text-gray-500">Lorem ipsum dolor sit amet, consectetur
               adipiscing elit, sed
@@ -111,14 +116,15 @@ export default function Home() {
                 tempor incididunt ut
                 labore et dolore magna aliqua.</p>
             </div>
-            <div className="flex flex-2">
+            <motion.div initial={{scale:0.8}} animate={isVisible && {scale:1}} transition={{duration:7}} className="flex flex-2">
               <Image
+                ref={targetRef}
                 src={image}
                 width={720}
                 height={320}
                 alt="Picture of the author"
               />
-            </div>
+            </motion.div>
 
           </div>
           <div className="flex flex-col md:flex-row-reverse w-full justify-between gap-10 md:gap-20 items-center ">
@@ -130,14 +136,15 @@ export default function Home() {
                 tempor incididunt ut
                 labore et dolore magna aliqua.</p>
             </div>
-            <div className="flex ">
+            <motion.div initial={{scale:0.8}} animate={isVisible1 && {scale:1}} transition={{duration:7}} className="flex ">
               <Image
+ref={targetRef1}
                 src={image2}
                 width={720}
                 height={320}
                 alt="Picture of the author"
               />
-            </div>
+            </motion.div>
 
           </div>
           <div className="flex flex-col md:flex-row w-full justify-between gap-10 md:gap-20 items-center">
@@ -149,14 +156,15 @@ export default function Home() {
                 tempor incididunt ut
                 labore et dolore magna aliqua.</p>
             </div>
-            <div className="flex flex-2">
+            <motion.div initial={{scale:0.8}} animate={isVisible2 && {scale:1}} transition={{duration:7}} className="flex flex-2">
               <Image
+ref={targetRef2}
                 src={image}
                 width={720}
                 height={320}
                 alt="Picture of the author"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </Section>
