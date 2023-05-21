@@ -7,7 +7,7 @@ import Image from "next/image"
 import { useState } from "react";
 import image from "./assets/port1.png"
 import image2 from "./assets/port2.png"
-import { FileSignature, Code2, Link, Globe } from "lucide-react";
+import { FileSignature, Code2, Link, Globe, Gift, BadgeCheck } from "lucide-react";
 // FileSignature
 export default function Home() {
 const {targetRef, isVisible} = useScrollAppear(0.1);
@@ -28,7 +28,7 @@ const {targetRef:targetRef2, isVisible:isVisible2} = useScrollAppear(0.1);
   //   }
   // };
   return (
-    <main className="flex-col items-center justify-center ">
+    <main>
       <Hero>
         <div className="flex  flex-[3] items-center justify-center gap-12 flex-col">
           <span className="text-4xl md:text-6xl lg:text-8xl font-extrabold text-center">MAKE A LIVING AS A WEB
@@ -43,11 +43,11 @@ const {targetRef:targetRef2, isVisible:isVisible2} = useScrollAppear(0.1);
             <span className="text-xl md:text-2xl font-bold text leading-6">JOIN A <br />COMMUNITY</span>
           </div>
           <div className="flex flex-col gap-2 ">
-          <Globe className="w-12 h-12 text-white" strokeWidth={1.3}/>
+          <Gift className="w-12 h-12 text-white" strokeWidth={1.3}/>
             <span className="text-xl md:text-2xl font-bold text leading-6">JOIN A <br />COMMUNITY</span>
           </div>
           <div className="flex flex-col gap-2 ">
-          <Globe className="w-12 h-12 text-white" strokeWidth={1.3}/>
+          <BadgeCheck className="w-12 h-12 text-white" strokeWidth={1.3}/>
             <span className="text-xl md:text-2xl font-bold text leading-6">JOIN A <br />COMMUNITY</span>
           </div>
         </div>
@@ -109,7 +109,7 @@ const {targetRef:targetRef2, isVisible:isVisible2} = useScrollAppear(0.1);
         <div className="flex flex-col gap-20">
           <div className="flex flex-col md:flex-row w-full justify-between gap-10 md:gap-20 items-center">
             <div className="flex flex-1 flex-col gap-4 ">
-              <span className="text-2xl font-extrabold text leading-6">TRNR<br /> APP</span>
+              <span className="text-2xl font-extrabold text leading-6"><span className="text-purple-800 font-black text-lg tracking-wider">01.</span><br/> TRNR<br /> APP</span>
               <p className="text-sm leading-relaxed text-gray-500">Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit, sed
                 do eiusmod
@@ -129,7 +129,7 @@ const {targetRef:targetRef2, isVisible:isVisible2} = useScrollAppear(0.1);
           </div>
           <div className="flex flex-col md:flex-row-reverse w-full justify-between gap-10 md:gap-20 items-center ">
             <div className="flex flex-col gap-4 ">
-              <span className="text-2xl font-extrabold text leading-6">TAPFO<br /> ALL IN ONE APP</span>
+              <span className="text-2xl font-extrabold text leading-6"><span className="text-purple-800 font-black text-lg tracking-wider">02.</span><br/> TAPFO<br /> ALL IN ONE APP</span>
               <p className="text-sm leading-relaxed text-gray-500">Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit, sed
                 do eiusmod
@@ -149,7 +149,7 @@ ref={targetRef1}
           </div>
           <div className="flex flex-col md:flex-row w-full justify-between gap-10 md:gap-20 items-center">
             <div className="flex flex-col gap-4 flex-1">
-              <span className="text-2xl font-extrabold text leading-6">CAMPUS<br /> MONK</span>
+              <span className="text-2xl font-extrabold text leading-6"><span className="text-purple-800 font-black text-lg tracking-wider">03.</span><br/>CAMPUS<br /> MONK</span>
               <p className="text-sm leading-relaxed text-gray-500">Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit, sed
                 do eiusmod
